@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+
+{% block page_title %}
+
+ {{month|title}} challenge
+
+{% endblock %}  
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{month|title}} challenge </title>
+</head>
+<body>
+    -->
+
+
+
+
+{% block content %}
+    {% include "challenges/includes/header.html" %}
+
+    <h1>{{ month|title}} challenge</h1>
+    {% if text in not None %}
+        <h2>{{ text }}</h2>
+    {% else %} 
+        <p> there is no paragraph for this month yet!</p>
+    {% endif %}
+
+{% endblock %}  
+  <!--
+</body>
+</html>
+-->
